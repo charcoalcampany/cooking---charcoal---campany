@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,1616 +7,881 @@
 <title>Cooking Charcoal Company | GGSS Kura</title>
 
 <style>
-
-/* =========================
-   RESET
-========================= */
-
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
-html {
     scroll-behavior: smooth;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f5f2ec;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #f5f5f5;
     color: #222;
-    line-height: 1.7;
 }
-
-/* =========================
-   HEADER
-========================= */
 
 header {
-    background: linear-gradient(135deg, #111, #353535);
-    color: white;
-    text-align: center;
-    padding: 35px 15px;
-}
-
-.logo {
-    width: 90px;
-    height: 90px;
-    margin: auto;
-    border-radius: 50%;
-    background: #d88900;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 42px;
-    box-shadow: 0 5px 15px rgba(0,0,0,.3);
-}
-
-header h1 {
-    margin-top: 15px;
-    font-size: 30px;
-}
-
-header p {
-    color: #f5a623;
-    font-weight: bold;
-}
-
-/* =========================
-   NAVIGATION
-========================= */
-
-nav {
     background: #222;
-    text-align: center;
-    padding: 12px 5px;
+    color: white;
+    padding: 15px 5%;
     position: sticky;
     top: 0;
-    z-index: 999;
-    box-shadow: 0 3px 10px rgba(0,0,0,.25);
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-area img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    border-radius: 50%;
+    background: white;
+}
+
+.logo-text h2 {
+    font-size: 18px;
+}
+
+.logo-text p {
+    font-size: 12px;
+    color: #ddd;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    display: inline-block;
-    margin: 5px 7px;
-    font-weight: bold;
+    padding: 7px 9px;
     font-size: 14px;
 }
 
 nav a:hover {
-    color: #f5a623;
+    background: #555;
+    border-radius: 5px;
 }
 
-/* =========================
-   HERO
-========================= */
-
 .hero {
-    min-height: 570px;
+    min-height: 80vh;
+    background: linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)),
+                url("product.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: white;
-    padding: 70px 20px;
-
-    background:
-    linear-gradient(rgba(0,0,0,.72), rgba(0,0,0,.72)),
-    url("https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=1600&q=80");
-
-    background-size: cover;
-    background-position: center;
+    padding: 40px 20px;
 }
 
 .hero-content {
-    max-width: 850px;
+    max-width: 800px;
 }
 
-.badge {
-    display: inline-block;
-    background: #d88900;
-    padding: 8px 18px;
-    border-radius: 30px;
-    font-weight: bold;
-    margin-bottom: 18px;
-}
-
-.hero h2 {
+.hero h1 {
     font-size: 48px;
-    line-height: 1.2;
     margin-bottom: 20px;
 }
 
 .hero p {
-    font-size: 19px;
-    max-width: 720px;
-    margin: auto;
+    font-size: 20px;
+    margin-bottom: 25px;
 }
 
-.hero-buttons {
-    margin-top: 20px;
-}
-
-.button {
+.btn {
     display: inline-block;
-    background: #d88900;
+    background: #333;
     color: white;
     text-decoration: none;
-    padding: 14px 25px;
-    margin: 7px;
-    border-radius: 7px;
-    font-weight: bold;
+    padding: 12px 22px;
+    border-radius: 6px;
+    margin: 5px;
     border: none;
     cursor: pointer;
+    font-size: 15px;
 }
 
-.button:hover {
-    background: #a96500;
+.btn:hover {
+    background: #555;
 }
-
-/* =========================
-   SECTIONS
-========================= */
 
 section {
-    max-width: 1100px;
-    margin: auto;
-    padding: 65px 20px;
+    padding: 60px 7%;
 }
 
-section > h2 {
+.section-title {
     text-align: center;
-    font-size: 32px;
     margin-bottom: 35px;
 }
 
-/* =========================
-   ABOUT
-========================= */
-
-.about-box {
-    background: white;
-    padding: 35px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,.08);
+.section-title h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
 }
 
-.about-box p {
+.section-title p {
+    color: #666;
+}
+
+.about {
+    background: white;
+}
+
+.about-content {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.about-content p {
     margin-bottom: 15px;
 }
 
-/* =========================
-   MISSION VISION
-========================= */
-
-.info-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-    margin-top: 25px;
+.products {
+    background: #eee;
 }
-
-.info-card {
-    background: white;
-    text-align: center;
-    padding: 35px 25px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,.08);
-}
-
-.info-icon {
-    font-size: 50px;
-}
-
-.info-card h3 {
-    font-size: 24px;
-    margin: 10px 0;
-}
-
-/* =========================
-   HIGHLIGHTS
-========================= */
-
-.highlight-box {
-    background: #292929;
-    color: white;
-    padding: 35px 20px;
-    border-radius: 15px;
-}
-
-.highlight-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
-    text-align: center;
-}
-
-.highlight {
-    padding: 15px;
-}
-
-.highlight-icon {
-    font-size: 42px;
-}
-
-.highlight h3 {
-    color: #f5a623;
-    margin: 8px 0;
-}
-
-/* =========================
-   PRODUCTS
-========================= */
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 25px;
 }
 
-.product-card {
+.card {
     background: white;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,.1);
-    transition: .3s;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0,0,0,.12);
     text-align: center;
 }
 
-.product-card:hover {
-    transform: translateY(-7px);
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
 }
 
-.product-photo {
-    height: 250px;
-    background: #dedbd4;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.product-photo-icon {
-    font-size: 85px;
-}
-
-.product-info {
-    padding: 25px;
-}
-
-.product-info h3 {
-    font-size: 24px;
+.card h3 {
     margin-bottom: 10px;
 }
 
 .price {
-    color: #d88900;
-    font-size: 19px;
     font-weight: bold;
-    margin-top: 12px;
+    margin: 15px 0;
 }
 
-/* =========================
-   PRODUCTION
-========================= */
-
-.production-box {
-    background: #292929;
-    color: white;
-    padding: 40px;
-    border-radius: 15px;
-}
-
-.production-item {
-    margin-bottom: 25px;
-}
-
-.production-item:last-child {
-    margin-bottom: 0;
-}
-
-.production-item h3 {
-    color: #f5a623;
-    margin-bottom: 5px;
-    font-size: 23px;
-}
-
-/* =========================
-   GALLERY
-========================= */
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.gallery-card {
+.production {
     background: white;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,.1);
 }
 
-.gallery-photo {
-    height: 250px;
-    background: #dedbd4;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.gallery-icon {
-    font-size: 85px;
-}
-
-.gallery-caption {
-    padding: 22px;
+.production-content {
+    max-width: 900px;
+    margin: auto;
     text-align: center;
 }
 
-.gallery-caption h3 {
-    margin-bottom: 5px;
+.production-content p {
+    margin-bottom: 15px;
 }
 
-/* =========================
-   WHY US
-========================= */
+.gallery {
+    background: #eee;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.gallery-item h3 {
+    margin-top: 12px;
+}
+
+.why-us {
+    background: white;
+}
 
 .why-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
 }
 
 .why-card {
-    background: white;
+    background: #f1f1f1;
+    padding: 25px;
+    border-radius: 10px;
     text-align: center;
-    padding: 30px 18px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,.08);
-}
-
-.why-icon {
-    font-size: 50px;
 }
 
 .why-card h3 {
-    margin: 10px 0;
+    margin-bottom: 10px;
 }
 
-/* =========================
-   ORDER
-========================= */
+.order {
+    background: #eee;
+}
 
-.order-box {
-    max-width: 750px;
+.order-form {
+    max-width: 650px;
     margin: auto;
     background: white;
-    padding: 35px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,.1);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0,0,0,.1);
 }
 
-.order-box label {
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
     display: block;
     font-weight: bold;
-    margin-top: 18px;
+    margin-bottom: 5px;
 }
 
-.order-box input,
-.order-box select,
-.order-box textarea {
+.form-group input,
+.form-group select,
+.form-group textarea {
     width: 100%;
-    padding: 14px;
-    margin-top: 7px;
+    padding: 12px;
     border: 1px solid #ccc;
-    border-radius: 7px;
-    font-size: 16px;
+    border-radius: 5px;
+    font-size: 15px;
 }
 
-.order-box textarea {
+.form-group textarea {
     min-height: 120px;
     resize: vertical;
 }
 
-.order-button {
-    width: 100%;
-    margin: 25px 0 0;
-    font-size: 16px;
+.contact {
+    background: white;
+    text-align: center;
 }
 
-/* =========================
-   CONTACT
-========================= */
-
 .contact-box {
-    background: white;
-    padding: 35px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,.08);
-    text-align: center;
+    max-width: 700px;
+    margin: auto;
 }
 
 .contact-item {
-    margin-bottom: 22px;
+    margin: 15px 0;
+    font-size: 17px;
 }
-
-.contact-item strong {
-    font-size: 18px;
-}
-
-.contact-button {
-    display: inline-block;
-    background: #292929;
-    color: white;
-    text-decoration: none;
-    padding: 14px 25px;
-    margin: 6px;
-    border-radius: 7px;
-    font-weight: bold;
-}
-
-.contact-button:hover {
-    background: #d88900;
-}
-
-/* =========================
-   FOOTER
-========================= */
 
 footer {
-    background: #111;
+    background: #222;
     color: white;
     text-align: center;
-    padding: 40px 15px;
+    padding: 25px 15px;
 }
 
-footer strong {
-    color: #f5a623;
+footer p {
+    margin: 5px;
 }
 
-/* =========================
-   FLOATING BUTTONS
-========================= */
-
-.floating-whatsapp,
-.floating-call {
-    position: fixed;
-    right: 18px;
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    color: white;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 26px;
-    z-index: 1000;
-    box-shadow: 0 4px 12px rgba(0,0,0,.3);
-}
-
-.floating-whatsapp {
-    bottom: 85px;
-    background: #25D366;
-}
-
-.floating-call {
-    bottom: 20px;
-    background: #333;
-}
-
-/* =========================
-   BACK TO TOP
-========================= */
-
-.top-button {
-    position: fixed;
-    right: 18px;
-    bottom: 150px;
-    width: 45px;
-    height: 45px;
-    background: #d88900;
-    color: white;
-    text-decoration: none;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 22px;
-    font-weight: bold;
-    z-index: 1000;
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 800px) {
-
-    .hero h2 {
-        font-size: 36px;
+@media (max-width: 700px) {
+    .navbar {
+        flex-direction: column;
     }
 
-    .highlight-grid,
-    .why-grid {
-        grid-template-columns: repeat(2, 1fr);
+    nav {
+        justify-content: center;
     }
 
-    .product-grid,
-    .gallery-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .info-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 600px) {
-
-    header h1 {
-        font-size: 23px;
-    }
-
-    .logo {
-        width: 75px;
-        height: 75px;
+    .hero h1 {
         font-size: 34px;
     }
 
-    .hero {
-        min-height: 520px;
-        padding: 60px 18px;
-    }
-
-    .hero h2 {
-        font-size: 30px;
-    }
-
     .hero p {
-        font-size: 16px;
+        font-size: 17px;
     }
 
     section {
-        padding: 45px 15px;
+        padding: 45px 5%;
     }
-
-    section > h2 {
-        font-size: 27px;
-    }
-
-    nav a {
-        font-size: 12px;
-        margin: 4px 2px;
-    }
-
-    .highlight-grid,
-    .why-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .about-box,
-    .order-box,
-    .contact-box,
-    .production-box {
-        padding: 25px 18px;
-    }
-
-    .product-photo,
-    .gallery-photo {
-        height: 220px;
-    }
-
 }
-
 </style>
-
 </head>
-
 
 <body>
 
-
-<!-- =========================
-     HEADER
-========================= -->
-
 <header>
+    <div class="navbar">
 
-<div class="logo">
-🔥🪵
-</div>
+        <div class="logo-area">
+            <img src="logo.jpg" alt="Cooking Charcoal Company Logo">
 
-<h1>
-COOKING CHARCOAL COMPANY
-</h1>
+            <div class="logo-text">
+                <h2>COOKING CHARCOAL COMPANY</h2>
+                <p>GGSS KURA - JANUARY 2026</p>
+            </div>
+        </div>
 
-<p>
-GGSS KURA - JANUARY 2026
-</p>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#products">Products</a>
+            <a href="#production">Production</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#why-us">Why Us</a>
+            <a href="#order">Order</a>
+            <a href="#contact">Contact</a>
+        </nav>
 
+    </div>
 </header>
 
 
-<!-- =========================
-     NAVIGATION
-========================= -->
+<!-- HOME -->
+<section class="hero" id="home">
 
-<nav>
+    <div class="hero-content">
 
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#products">Products</a>
-<a href="#production">Production</a>
-<a href="#gallery">Gallery</a>
-<a href="#why">Why Us</a>
-<a href="#order">Order</a>
-<a href="#contact">Contact</a>
+        <h1>Quality Cooking Charcoal</h1>
 
-</nav>
+        <p>
+            Welcome to Cooking Charcoal Company.
+            We explore useful cooking fuel solutions using charcoal
+            and agricultural biomass materials.
+        </p>
 
+        <a href="#products" class="btn">
+            VIEW OUR PRODUCTS
+        </a>
 
-<!-- =========================
-     HOME
-========================= -->
-
-<div class="hero" id="home">
-
-<div class="hero-content">
-
-<div class="badge">
-🌾 AGRICULTURAL BIOMASS PROJECT
-</div>
-
-<h2>
-Quality Cooking Fuel Solutions
-</h2>
-
-<p>
-
-Welcome to <strong>Cooking Charcoal Company</strong>.
-
-We explore practical cooking fuel solutions
-using charcoal and suitable agricultural
-biomass materials.
-
-</p>
-
-<div class="hero-buttons">
-
-<a class="button" href="#products">
-🔥 VIEW PRODUCTS
-</a>
-
-<a class="button" href="#order">
-🛒 ORDER NOW
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- =========================
-     ABOUT
-========================= -->
-
-<section id="about">
-
-<h2>
-About Our Company
-</h2>
-
-<div class="about-box">
-
-<p>
-
-<strong>Cooking Charcoal Company</strong>
-is a student project from
-<strong>GGSS Kura - January 2026.</strong>
-
-</p>
-
-<p>
-
-Our project focuses on exploring useful
-cooking fuel from available agricultural
-materials, including biomass waste such
-as rice husk.
-
-</p>
-
-<p>
-
-Our goal is to explore practical energy
-solutions for cooking while making better
-use of suitable agricultural waste materials.
-
-</p>
-
-</div>
-
-
-<div class="info-grid">
-
-
-<div class="info-card">
-
-<div class="info-icon">
-🎯
-</div>
-
-<h3>
-Our Mission
-</h3>
-
-<p>
-
-To explore useful cooking fuel solutions
-and encourage creative use of suitable
-agricultural biomass materials.
-
-</p>
-
-</div>
-
-
-<div class="info-card">
-
-<div class="info-icon">
-👁️
-</div>
-
-<h3>
-Our Vision
-</h3>
-
-<p>
-
-To promote practical ideas that make
-better use of available materials while
-supporting innovative cooking fuel projects.
-
-</p>
-
-</div>
-
-
-</div>
+    </div>
 
 </section>
 
 
-<!-- =========================
-     HIGHLIGHTS
-========================= -->
+<!-- ABOUT -->
+<section class="about" id="about">
 
-<section>
+    <div class="section-title">
+        <h2>About Our Company</h2>
+        <p>Our project and purpose</p>
+    </div>
 
-<h2>
-Our Project Highlights
-</h2>
+    <div class="about-content">
 
-<div class="highlight-box">
+        <p>
+            Cooking Charcoal Company is a student project from
+            <strong>GGSS Kura - January 2026</strong>.
+        </p>
 
-<div class="highlight-grid">
+        <p>
+            Our project explores useful cooking fuel made from
+            available agricultural materials and biomass waste
+            such as rice husk.
+        </p>
 
+        <p>
+            We aim to promote practical energy solutions and
+            better use of agricultural waste by converting
+            suitable materials into useful charcoal products.
+        </p>
 
-<div class="highlight">
-
-<div class="highlight-icon">
-🔥
-</div>
-
-<h3>
-Cooking Fuel
-</h3>
-
-<p>
-Exploring useful charcoal solutions.
-</p>
-
-</div>
-
-
-<div class="highlight">
-
-<div class="highlight-icon">
-🌾
-</div>
-
-<h3>
-Biomass
-</h3>
-
-<p>
-Exploring suitable agricultural materials.
-</p>
-
-</div>
-
-
-<div class="highlight">
-
-<div class="highlight-icon">
-♻️
-</div>
-
-<h3>
-Resource Use
-</h3>
-
-<p>
-Making better use of suitable materials.
-</p>
-
-</div>
-
-
-<div class="highlight">
-
-<div class="highlight-icon">
-💡
-</div>
-
-<h3>
-Innovation
-</h3>
-
-<p>
-Encouraging creative project ideas.
-</p>
-
-</div>
-
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
 
-<!-- =========================
-     PRODUCTS
-========================= -->
+<!-- PRODUCTS -->
+<section class="products" id="products">
 
-<section id="products">
+    <div class="section-title">
+        <h2>Products & Prices</h2>
+        <p>Our cooking charcoal products</p>
+    </div>
 
-<h2>
-Our Products & Prices
-</h2>
+    <div class="product-grid">
 
-<div class="product-grid">
+        <div class="card">
 
+            <img src="product.jpg"
+                 alt="Cooking Charcoal">
 
-<div class="product-card">
+            <h3>Cooking Charcoal</h3>
 
-<div class="product-photo">
+            <p>
+                Quality charcoal for household cooking applications.
+            </p>
 
-<div class="product-photo-icon">
-🔥🪵
-</div>
+            <p class="price">
+                Price: Contact Us
+            </p>
 
-</div>
+            <a href="#order" class="btn">
+                ORDER NOW
+            </a>
 
-<div class="product-info">
-
-<h3>
-Cooking Charcoal
-</h3>
-
-<p>
-Quality charcoal for household
-cooking applications.
-</p>
-
-<p class="price">
-Price: Contact Us
-</p>
-
-<a
-class="button"
-href="https://wa.me/2347066661628?text=Hello%2C%20I%20am%20interested%20in%20buying%20Cooking%20Charcoal.">
-
-ORDER NOW
-
-</a>
-
-</div>
-
-</div>
+        </div>
 
 
-<div class="product-card">
+        <div class="card">
 
-<div class="product-photo">
+            <img src="biomass.jpg"
+                 alt="Biomass Charcoal">
 
-<div class="product-photo-icon">
-🌾🔥
-</div>
+            <h3>Biomass Charcoal</h3>
 
-</div>
+            <p>
+                Charcoal produced from suitable agricultural
+                biomass materials.
+            </p>
 
-<div class="product-info">
+            <p class="price">
+                Price: Contact Us
+            </p>
 
-<h3>
-Biomass Charcoal
-</h3>
+            <a href="#order" class="btn">
+                ORDER NOW
+            </a>
 
-<p>
-Charcoal produced from suitable
-agricultural biomass materials.
-</p>
-
-<p class="price">
-Price: Contact Us
-</p>
-
-<a
-class="button"
-href="https://wa.me/2347066661628?text=Hello%2C%20I%20am%20interested%20in%20buying%20Biomass%20Charcoal.">
-
-ORDER NOW
-
-</a>
-
-</div>
-
-</div>
+        </div>
 
 
-<div class="product-card">
+        <div class="card">
 
-<div class="product-photo">
+            <img src="package.jpg"
+                 alt="Charcoal Package">
 
-<div class="product-photo-icon">
-📦🔥
-</div>
+            <h3>Charcoal Packages</h3>
 
-</div>
+            <p>
+                Different package options can be discussed
+                according to customer needs.
+            </p>
 
-<div class="product-info">
+            <p class="price">
+                Price: Contact Us
+            </p>
 
-<h3>
-Charcoal Packages
-</h3>
+            <a href="#order" class="btn">
+                ORDER NOW
+            </a>
 
-<p>
-Different package options can be
-discussed according to customer needs.
-</p>
+        </div>
 
-<p class="price">
-Price: Contact Us
-</p>
-
-<a
-class="button"
-href="https://wa.me/2347066661628?text=Hello%2C%20I%20am%20interested%20in%20your%20Charcoal%20Packages.">
-
-ORDER NOW
-
-</a>
-
-</div>
-
-</div>
-
-
-</div>
+    </div>
 
 </section>
 
 
-<!-- =========================
-     PRODUCTION
-========================= -->
+<!-- PRODUCTION -->
+<section class="production" id="production">
 
-<section id="production">
+    <div class="section-title">
+        <h2>Production</h2>
+        <p>From agricultural waste to useful charcoal</p>
+    </div>
 
-<h2>
-Our Production Project
-</h2>
+    <div class="production-content">
 
-<div class="production-box">
+        <p>
+            Our project explores the conversion of agricultural
+            waste such as rice husk into useful charcoal products.
+        </p>
 
+        <p>
+            By making better use of suitable biomass materials,
+            we explore practical ways of producing useful cooking
+            fuel from agricultural waste.
+        </p>
 
-<div class="production-item">
+        <p>
+            Our goal is to encourage innovation, responsible use
+            of available materials and useful cooking fuel solutions.
+        </p>
 
-<h3>
-🌾 Agricultural Biomass
-</h3>
-
-<p>
-
-We explore methods of using suitable
-agricultural materials such as rice husk
-in our biomass charcoal project.
-
-</p>
-
-</div>
-
-
-<div class="production-item">
-
-<h3>
-🔥 Cooking Fuel
-</h3>
-
-<p>
-
-The project investigates how suitable
-biomass materials can be explored for
-use in cooking fuel applications.
-
-</p>
-
-</div>
-
-
-<div class="production-item">
-
-<h3>
-💡 Innovation
-</h3>
-
-<p>
-
-Our project encourages students to think
-creatively about available materials and
-develop useful energy-related ideas.
-
-</p>
-
-</div>
-
-
-</div>
+    </div>
 
 </section>
 
 
-<!-- =========================
-     GALLERY
-========================= -->
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
 
-<section id="gallery">
+    <div class="section-title">
+        <h2>Product Gallery</h2>
+        <p>Our products and project materials</p>
+    </div>
 
-<h2>
-Company Gallery
-</h2>
+    <div class="gallery-grid">
 
-<div class="gallery-grid">
+        <div class="gallery-item">
 
+            <img src="product.jpg"
+                 alt="Cooking Charcoal Product">
 
-<div class="gallery-card">
+            <h3>Cooking Charcoal</h3>
 
-<div class="gallery-photo">
+            <p>
+                Our cooking charcoal product.
+            </p>
 
-<div class="gallery-icon">
-🔥🪵
-</div>
-
-</div>
-
-<div class="gallery-caption">
-
-<h3>
-Cooking Charcoal
-</h3>
-
-<p>
-Cooking charcoal product area.
-</p>
-
-</div>
-
-</div>
+        </div>
 
 
-<div class="gallery-card">
+        <div class="gallery-item">
 
-<div class="gallery-photo">
+            <img src="biomass.jpg"
+                 alt="Rice Husk Biomass">
 
-<div class="gallery-icon">
-🌾
-</div>
+            <h3>Biomass Charcoal</h3>
 
-</div>
+            <p>
+                Agricultural biomass material used
+                for our project.
+            </p>
 
-<div class="gallery-caption">
-
-<h3>
-Rice Husk Biomass
-</h3>
-
-<p>
-Agricultural biomass material
-used for our project.
-</p>
-
-</div>
-
-</div>
+        </div>
 
 
-<div class="gallery-card">
+        <div class="gallery-item">
 
-<div class="gallery-photo">
+            <img src="package.jpg"
+                 alt="Packaged Charcoal">
 
-<div class="gallery-icon">
-📦🔥
-</div>
+            <h3>Charcoal Package</h3>
 
-</div>
+            <p>
+                Our charcoal packaging and presentation.
+            </p>
 
-<div class="gallery-caption">
+        </div>
 
-<h3>
-Charcoal Packaging
-</h3>
-
-<p>
-Our charcoal packaging
-and presentation area.
-</p>
-
-</div>
-
-</div>
-
-
-</div>
-
-<p style="text-align:center; margin-top:25px;">
-
-📸 Your real company photographs
-can be placed here later.
-
-</p>
+    </div>
 
 </section>
 
 
-<!-- =========================
-     WHY US
-========================= -->
+<!-- WHY US -->
+<section class="why-us" id="why-us">
 
-<section id="why">
+    <div class="section-title">
 
-<h2>
-Why Choose Us?
-</h2>
+        <h2>Why Choose Us?</h2>
 
-<div class="why-grid">
+        <p>
+            Practical ideas for useful cooking fuel
+        </p>
 
-
-<div class="why-card">
-
-<div class="why-icon">
-🔥
-</div>
-
-<h3>
-Quality Focus
-</h3>
-
-<p>
-We focus on useful charcoal products
-for cooking applications.
-</p>
-
-</div>
+    </div>
 
 
-<div class="why-card">
+    <div class="why-grid">
 
-<div class="why-icon">
-🌾
-</div>
+        <div class="why-card">
 
-<h3>
-Agricultural Materials
-</h3>
+            <h3>Quality Charcoal</h3>
 
-<p>
-We explore suitable agricultural
-materials such as rice husk.
-</p>
+            <p>
+                We focus on useful cooking charcoal products.
+            </p>
 
-</div>
+        </div>
 
 
-<div class="why-card">
+        <div class="why-card">
 
-<div class="why-icon">
-📦
-</div>
+            <h3>Agricultural Waste</h3>
 
-<h3>
-Package Options
-</h3>
+            <p>
+                We explore better uses for suitable agricultural
+                biomass materials.
+            </p>
 
-<p>
-Customers can discuss suitable
-charcoal package options.
-</p>
-
-</div>
+        </div>
 
 
-<div class="why-card">
+        <div class="why-card">
 
-<div class="why-icon">
-📞
-</div>
+            <h3>Different Packages</h3>
 
-<h3>
-Easy Ordering
-</h3>
+            <p>
+                Package options can be discussed according
+                to customer needs.
+            </p>
 
-<p>
-Contact us through phone or
-WhatsApp for enquiries and orders.
-</p>
-
-</div>
+        </div>
 
 
-</div>
+        <div class="why-card">
+
+            <h3>Easy Ordering</h3>
+
+            <p>
+                Contact us by phone or WhatsApp for enquiries
+                and orders.
+            </p>
+
+        </div>
+
+    </div>
 
 </section>
 
 
-<!-- =========================
-     ORDER
-========================= -->
+<!-- ORDER -->
+<section class="order" id="order">
 
-<section id="order">
+    <div class="section-title">
 
-<h2>
-Place an Order
-</h2>
+        <h2>Place an Order</h2>
 
-<div class="order-box">
+        <p>
+            Send your order directly through WhatsApp.
+        </p>
 
-<p style="text-align:center;">
-
-Fill in the information below and
-send your order directly through WhatsApp.
-
-</p>
+    </div>
 
 
-<label for="name">
-Your Name
-</label>
+    <form class="order-form"
+          onsubmit="sendWhatsApp(); return false;">
 
-<input
-type="text"
-id="name"
-placeholder="Enter your name"
->
+        <div class="form-group">
 
+            <label for="name">
+                Your Name
+            </label>
 
-<label for="phone">
-Phone Number
-</label>
+            <input type="text"
+                   id="name"
+                   placeholder="Enter your name"
+                   required>
 
-<input
-type="tel"
-id="phone"
-placeholder="Enter your phone number"
->
+        </div>
 
 
-<label for="product">
-Select Product
-</label>
+        <div class="form-group">
 
-<select id="product">
+            <label for="phone">
+                Phone Number
+            </label>
 
-<option value="Cooking Charcoal">
-Cooking Charcoal
-</option>
+            <input type="tel"
+                   id="phone"
+                   placeholder="Enter your phone number"
+                   required>
 
-<option value="Biomass Charcoal">
-Biomass Charcoal
-</option>
-
-<option value="Charcoal Packages">
-Charcoal Packages
-</option>
-
-</select>
+        </div>
 
 
-<label for="quantity">
-Quantity
-</label>
+        <div class="form-group">
 
-<input
-type="text"
-id="quantity"
-placeholder="Example: 2 bags"
->
+            <label for="product">
+                Select Product
+            </label>
+
+            <select id="product">
+
+                <option>
+                    Cooking Charcoal
+                </option>
+
+                <option>
+                    Biomass Charcoal
+                </option>
+
+                <option>
+                    Charcoal Packages
+                </option>
+
+            </select>
+
+        </div>
 
 
-<label for="message">
-Additional Message
-</label>
+        <div class="form-group">
 
-<textarea
-id="message"
-placeholder="Any additional information">
-</textarea>
+            <label for="quantity">
+                Quantity
+            </label>
+
+            <input type="text"
+                   id="quantity"
+                   placeholder="Example: 2 bags"
+                   required>
+
+        </div>
 
 
-<button
-class="button order-button"
-onclick="sendOrder()">
+        <div class="form-group">
 
-💬 SEND ORDER ON WHATSAPP
+            <label for="message">
+                Additional Message
+            </label>
 
-</button>
+            <textarea id="message"
+                      placeholder="Write any additional information"></textarea>
 
-</div>
+        </div>
+
+
+        <button type="submit" class="btn">
+            SEND ORDER ON WHATSAPP
+        </button>
+
+    </form>
 
 </section>
 
 
-<!-- =========================
-     CONTACT
-========================= -->
+<!-- CONTACT -->
+<section class="contact" id="contact">
 
-<section id="contact">
+    <div class="section-title">
 
-<h2>
-Contact Our Company
-</h2>
+        <h2>Contact Us</h2>
 
-<div class="contact-box">
+        <p>
+            We are available for enquiries and orders.
+        </p>
 
-
-<div class="contact-item">
-
-<strong>
-📍 Location
-</strong>
-
-<p>
-Kofar Yamma, Kura,
-Kano State, Nigeria
-</p>
-
-</div>
+    </div>
 
 
-<div class="contact-item">
+    <div class="contact-box">
 
-<strong>
-📞 Phone
-</strong>
-
-<p>
-07066661628 / 08032869053
-</p>
-
-</div>
+        <div class="contact-item">
+            <strong>Location:</strong><br>
+            Kofar Yamma, Kura, Kano State, Nigeria
+        </div>
 
 
-<div class="contact-item">
-
-<strong>
-💬 WhatsApp
-</strong>
-
-<p>
-07066661628 / 08032869053
-</p>
-
-</div>
+        <div class="contact-item">
+            <strong>Phone:</strong><br>
+            07066661628 / 08032869053
+        </div>
 
 
-<div class="contact-item">
-
-<strong>
-✉️ Email
-</strong>
-
-<p>
-irfanaseem002@gmail.com
-</p>
-
-</div>
+        <div class="contact-item">
+            <strong>Email:</strong><br>
+            irfanaseem002@gmail.com
+        </div>
 
 
-<a
-class="contact-button"
-href="tel:07066661628">
-
-📞 CALL US
-
-</a>
+        <a class="btn"
+           href="tel:07066661628">
+            CALL US
+        </a>
 
 
-<a
-class="contact-button"
-href="https://wa.me/2347066661628">
+        <a class="btn"
+           href="https://wa.me/2347066661628"
+           target="_blank">
+            WHATSAPP US
+        </a>
 
-💬 WHATSAPP US
-
-</a>
-
-
-</div>
+    </div>
 
 </section>
 
 
-<!-- =========================
-     FOOTER
-========================= -->
-
+<!-- FOOTER -->
 <footer>
 
-<p>
-<strong>
-COOKING CHARCOAL COMPANY
-</strong>
-</p>
+    <p>
+        <strong>COOKING CHARCOAL COMPANY</strong>
+    </p>
 
-<p>
-GGSS KURA - JANUARY 2026
-</p>
+    <p>
+        GGSS KURA - JANUARY 2026
+    </p>
 
-<p>
-Kofar Yamma, Kura, Kano State, Nigeria
-</p>
-
-<p>
-© 2026 Cooking Charcoal Company
-</p>
-
-<p>
-Quality Cooking Fuel Solutions
-</p>
+    <p>
+        Student project exploring useful cooking fuel
+        from agricultural biomass materials.
+    </p>
 
 </footer>
 
 
-<!-- =========================
-     FLOATING BUTTONS
-========================= -->
-
-<a
-class="floating-whatsapp"
-href="https://wa.me/2347066661628"
-aria-label="WhatsApp">
-
-💬
-
-</a>
-
-
-<a
-class="floating-call"
-href="tel:07066661628"
-aria-label="Call">
-
-📞
-
-</a>
-
-
-<a
-class="top-button"
-href="#home"
-aria-label="Back to top">
-
-↑
-
-</a>
-
-
-<!-- =========================
-     JAVASCRIPT
-========================= -->
-
 <script>
 
-function sendOrder() {
+function sendWhatsApp() {
 
     var name =
-    document.getElementById("name").value.trim();
+        document.getElementById("name").value;
 
     var phone =
-    document.getElementById("phone").value.trim();
+        document.getElementById("phone").value;
 
     var product =
-    document.getElementById("product").value;
+        document.getElementById("product").value;
 
     var quantity =
-    document.getElementById("quantity").value.trim();
+        document.getElementById("quantity").value;
 
     var message =
-    document.getElementById("message").value.trim();
-
-
-    if (name === "") {
-
-        alert("Please enter your name.");
-
-        return;
-
-    }
-
-
-    if (phone === "") {
-
-        alert("Please enter your phone number.");
-
-        return;
-
-    }
-
-
-    if (quantity === "") {
-
-        alert("Please enter the quantity.");
-
-        return;
-
-    }
+        document.getElementById("message").value;
 
 
     var text =
-    "Hello, Cooking Charcoal Company.%0A%0A" +
-
-    "I would like to place an order.%0A%0A" +
-
-    "Name: " +
-    encodeURIComponent(name) +
-
-    "%0A" +
-
-    "Phone: " +
-    encodeURIComponent(phone) +
-
-    "%0A" +
-
-    "Product: " +
-    encodeURIComponent(product) +
-
-    "%0A" +
-
-    "Quantity: " +
-    encodeURIComponent(quantity) +
-
-    "%0A" +
-
-    "Message: " +
-    encodeURIComponent(message);
+        "COOKING CHARCOAL COMPANY ORDER%0A%0A" +
+        "Name: " + encodeURIComponent(name) +
+        "%0APhone: " + encodeURIComponent(phone) +
+        "%0AProduct: " + encodeURIComponent(product) +
+        "%0AQuantity: " + encodeURIComponent(quantity) +
+        "%0AMessage: " + encodeURIComponent(message);
 
 
-    window.open(
-        "https://wa.me/2347066661628?text=" + text,
-        "_blank"
-    );
+    var whatsappNumber =
+        "2347066661628";
+
+
+    var url =
+        "https://wa.me/" +
+        whatsappNumber +
+        "?text=" +
+        text;
+
+
+    window.open(url, "_blank");
 
 }
 
 </script>
 
-
 </body>
-
 </html>
